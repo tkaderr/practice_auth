@@ -4,7 +4,8 @@ module.exports = (app) => {
 //the 'google' string is refered to the GoogleStrategy. GoogleStrategy in the code has some string id called 'google'
     app.get('/auth/google', passport.authenticate('google', {
       //the scope specifies to google server what acces we want in this users profile and email
-      scope: ['profile', 'email']
+      scope: ['profile', 'email'],
+      prompt : "select_account"
     })
     );
 
